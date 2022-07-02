@@ -10,8 +10,9 @@ btnEditList.forEach(button => {
 	xmlHttp.onreadystatechange = function(){
 		let jsonObject = JSON.parse(xmlHttp.responseText);
 		document.getElementById("idEdit").value = jsonObject.id;
-		document.getElementById("descriptionEdit").value = jsonObject.description;
-		document.getElementById("codeEdit").value = jsonObject.code;
+		document.getElementById("ddlCountryEdit").value = jsonObject.countryid;
+		document.getElementById("nameEdit").value = jsonObject.name;
+		document.getElementById("detailsEdit").value = jsonObject.details;
 	};
 	
 	var myModal = new bootstrap.Modal(document.getElementById('editModal'));
@@ -40,8 +41,9 @@ btnDetailsList.forEach(button => {
 	xmlHttp.onreadystatechange = function(){
 		let jsonObject = JSON.parse(xmlHttp.responseText);
 		document.getElementById("idDetails").value = jsonObject.id;
-		document.getElementById("descriptionDetails").value = jsonObject.description;
-		document.getElementById("codeDetails").value = jsonObject.code;
+		document.getElementById("ddlCountryDetails").value = jsonObject.countryid;
+		document.getElementById("nameDetails").value = jsonObject.name;
+		document.getElementById("detailsDetails").value = jsonObject.details;
 	};
 	
 	var myModal = new bootstrap.Modal(document.getElementById('detailsModal'));
