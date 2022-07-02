@@ -300,110 +300,243 @@
     </header>
     <!--header end-->
 
-    <!--sidebar start-->
-    <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" th:href="@{/}">
-                          <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
-                      </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Vehicles</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
-              <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
-              <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_cogs"></i>
-                          <span>Parameters</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/vehicleMakes}">Vehicle Makes</a></li>
-              <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-              <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
-              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="fa fa-users"></i>
-                          <span>People</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/employees}">Employee</a></li>
-              <li><a class="" th:href="@{/clients}">Clients</a></li>
-              <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
-              <li><a class="" th:href="@{/users}">Users</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_piechart"></i>
-                          <span>HR Settings</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-              <li><a class="" th:href="@{/employeeTypes}">Employee Type</a></li>
-            </ul>
-          </li>
-           <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="fa fa-usd"></i>
-                          <span>Accounts</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_globe"></i>
-                          <span>Globals</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/countries}">Countries</a></li>
-              <li><a class="" th:href="@{/states}">States</a></li>
-              <li><a class="" th:href="@{/locations}">Locations</a></li>
-            </ul>
-          </li>
-     
-         <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_book"></i>
-                          <span>Reports</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>                         
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/blank}">Vehicle Reports</a></li>
-              <li><a class="" th:href="@{/blank}">Employee Reports</a></li>
-              <li><a class="" th:href="@{/blank}">Accounts Reports</a></li>
-            </ul>                      
-          </li>
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
 
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#vehicles-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Vehicles</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>	
+        <ul id="vehicles-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicles}"></i><span>Vehicle Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleMaintenances}"></i><span>Maintenance</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleMovements}"></i><span>Movements</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleHires}"></i><span>Hires</span>
+            </a>
+          </li>
         </ul>
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
-    <!--sidebar end-->
+      </li><!-- End Vehicles Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#parameters-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Parameters</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="parameters-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleMakes}"></i><span>Vehicle Makes</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleModels}"></i><span>Vehicle Models</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleTypes}"></i><span>Vehicle Types</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/vehicleStatuses}"></i><span>Status Values</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Parameters Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#people-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>People</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="people-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/employees}"></i><span>Employee</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/clients}"></i><span>Clients</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/suppliers}"></i><span>Suppliers</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/contacts}"></i><span>Contacts</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/users}"></i><span>Users</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End People Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#hr-setting-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>HR Settings</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="hr-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/jobTitles}"></i><span>Job Titles</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/employeeTypes}"></i><span>Employee Type</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End HR Settings Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#accounts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Accounts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="accounts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/invoices}"></i><span>Invoices</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/invoiceStatuses}"></i><span>Invoice Status Values</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Accounts Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#globals-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Globals</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="globals-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a th:href="@{/countries}">
+              <i class="bi bi-circle"></i><span>Countries</span>
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/states}">
+              <i class="bi bi-circle" ></i><span>States</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle" th:href="@{/locations}"></i><span>Locations</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Globals Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#reports-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a th:href="@{/blank}">
+              <i class="bi bi-circle"></i><span>Vehicle Reports</span>
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/blank}">
+              <i class="bi bi-circle"></i><span>Employee Reports</span>
+            </a>
+          </li>
+          <li>
+            <a th:href="@{/blank}">
+              <i class="bi bi-circle"></i><span>Accounts Reports</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Reports Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-faq.html">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-register.html">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-error-404.html">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-blank.html">
+          <i class="bi bi-file-earmark"></i>
+          <span>Blank</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
 
     <!--main content start-->
     <section id="main-content">
