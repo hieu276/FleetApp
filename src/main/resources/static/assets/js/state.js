@@ -44,6 +44,8 @@ btnDetailsList.forEach(button => {
 		document.getElementById("ddlCountryDetails").value = jsonObject.countryid;
 		document.getElementById("nameDetails").value = jsonObject.name;
 		document.getElementById("detailsDetails").value = jsonObject.details;
+		document.getElementById("lastModifiedByDetails").value = jsonObject.lastModifiedBy;
+		document.getElementById("lastModifiedDateDetails").value = jsonObject.lastModifiedDate.substr(0,19).replace("T", " ");
 	};
 	
 	var myModal = new bootstrap.Modal(document.getElementById('detailsModal'));

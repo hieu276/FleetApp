@@ -42,6 +42,8 @@ btnDetailsList.forEach(button => {
 		document.getElementById("idDetails").value = jsonObject.id;
 		document.getElementById("descriptionDetails").value = jsonObject.description;
 		document.getElementById("codeDetails").value = jsonObject.code;
+		document.getElementById("lastModifiedByDetails").value = jsonObject.lastModifiedBy;
+		document.getElementById("lastModifiedDateDetails").value = jsonObject.lastModifiedDate.substr(0,19).replace("T", " ");
 	};
 	
 	var myModal = new bootstrap.Modal(document.getElementById('detailsModal'));
