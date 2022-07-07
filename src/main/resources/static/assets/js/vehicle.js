@@ -47,7 +47,7 @@ photoBtn.forEach(button => {
 	button.addEventListener('click', function(event) {
 	event.preventDefault();
 	let href1 = this.getAttribute('href');
-	document.querySelector('#photoModal #vehiclePhoto').href = href1;
+	document.querySelector('#photoModal #vehiclePhoto').src = href1;
 	var myModal = new bootstrap.Modal(document.getElementById('#photoModal'));
 	myModal.show();
 	});

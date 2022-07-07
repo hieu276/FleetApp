@@ -591,7 +591,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleTypeAdd" class="col-sm-4 col-form-label">Vehicle Type:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleTypeAdd" name="vehicletypeid">
 												<option>-SELECT-</option>
 												<option th:each="vehicleType : ${vehicleTypes}"
@@ -603,7 +603,7 @@
 									<div class="mb-1">
 										<label for="txtVehicleNameAdd" class="col-sm-4 col-form-label">Vehicle Name:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtVehicleNameAdd" name="name"
 												placeholder="Vehicle name">
 										</div>
@@ -611,15 +611,14 @@
 									<div class="mb-1">
 										<label for="txtVehicleNumberAdd" class="col-sm-4 col-form-label">Vehicle Number:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtVehicleNumberAdd"
 												name="vehicleNumber" placeholder="Vehicle number">
 										</div>
 									</div>
 									<div class="mb-1">
-										<label for="txtRegistrationDateAdd" class="col-sm-4 col-form-label">Registration
-											Date: </label>
-										<div class="col-sm-6">
+										<label for="txtRegistrationDateAdd" class="col-sm-4 col-form-label">Registration Date: </label>
+										<div class="col-sm-10">
 											<input type="date" class="form-control" id="txtRegistrationDateAdd"
 												name="registrationDate" placeholder="Registration date">
 										</div>
@@ -627,15 +626,14 @@
 									<div class="mb-1">
 										<label for="txtDescriptionAdd" class="col-sm-4 col-form-label">Description:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<textarea type="text" class="form-control" id="txtDescriptionAdd"
 												name="description" placeholder="Description" rows="2"></textarea>
 										</div>
 									</div>
 									<div class="mb-1">
-										<label for="txtAcquisitionDateAdd" class="col-sm-4 col-form-label">Acquisition
-											Date: </label>
-										<div class="col-sm-6">
+										<label for="txtAcquisitionDateAdd" class="col-sm-4 col-form-label">Acquisition Date: </label>
+										<div class="col-sm-10">
 											<input type="date" class="form-control" id="txtAcquisitionDateAdd"
 												name="acquisitionDate" placeholder="Acquisition date">
 										</div>
@@ -643,7 +641,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleMakeAdd" class="col-sm-4 col-form-label">Vehicle Make:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleMakeAdd" name="vehiclemakeid">
 												<option>-SELECT-</option>
 												<option th:each="vehicleMake : ${vehicleMakes}"
@@ -655,7 +653,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleModelAdd" class="col-sm-4 col-form-label">Vehicle Model:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleModelAdd" name="vehiclemodelid">
 												<option>-SELECT-</option>
 												<option th:each="vehicleModel : ${vehicleModels}"
@@ -668,7 +666,7 @@
 								<td width="50%" style="padding-left:10px">
 									<div class="mb-1">
 										<label for="ddlCurrentLocationAdd" class="col-sm-4 col-form-label">Current Location</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlCurrentLocationAdd" name="locationid">
 												<option>-SELECT-</option>
 												<option th:each="location : ${locations}" th:value="${location.id}"
@@ -682,7 +680,7 @@
 									</div>
 									<div class="mb-1">
 										<label for="txtPowerAdd" class="col-sm-4 col-form-label">Power: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="ddlPowerAdd" name="power"
 												placeholder="Power(disel or fuel)">
 										</div>
@@ -690,7 +688,7 @@
 									<div class="mb-1">
 										<label for="txtFuelCapacityAdd" class="col-sm-4 col-form-label">Fuel Capacity:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtfuelCapacityAdd"
 												name="fuelCapacity" placeholder="Fuel Capacity">
 										</div>
@@ -698,21 +696,21 @@
 									<div class="mb-1">
 										<label for="txtNetWeightAdd" class="col-sm-4 col-form-label">Net Weight:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtNetWeightAdd"
 												name="netWeight" placeholder="Net Weight">
 										</div>
 									</div>
 									<div class="mb-1">
 										<label for="txtRemarksAdd" class="col-sm-4 col-form-label">Remarks: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<textarea type="text" class="form-control" id="txtRemarksAdd" name="remarks"
 												placeholder="Remarks" rows="2"></textarea>
 										</div>
 									</div>
 									<div class="mb-1">
 										<label for="ddlEmployeeAdd" class="col-sm-4 col-form-label">In Charge</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlEmployeeAdd" name="employeeid">
 												<option disabled>-SELECT-</option>
 												<option th:each="employee : ${employees}" th:value="${employee.id}"
@@ -723,7 +721,7 @@
 									</div>
 									<div class="mb-1">
 										<label for="ddlCurrentStatusAdd" class="col-sm-4 col-form-label">Current Status</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlCurrentStatusAdd"
 												name="vehiclestatusid">
 												<option>-SELECT-</option>
@@ -736,7 +734,7 @@
 									</div>
 									<div class="mb-1">
 										<label for="flpImageAdd" class="col-sm-4 col-form-label">Select Image: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="file" class="form-control-file" id="fupImageAdd" name="photo"
 												placeholder="Select File">
 										</div>
@@ -766,7 +764,7 @@
 								<td width="50%">
 									<div class="mb-1">
 										<label for="txtIdEdit" class="col-sm-4 col-form-label">Id: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtIdEdit" name="id"
 												placeholder="Vehicle Id">
 										</div>
@@ -774,7 +772,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleTypeEdit" class="col-sm-4 col-form-label">Vehicle Type:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleTypeEdit" name="vehicletypeid">
 												<option>-SELECT-</option>
 												<option th:each="vehicleType : ${vehicleTypes}"
@@ -785,7 +783,7 @@
 									</div>
 									<div class="mb-1">
 										<label for="txtNameEdit" class="col-sm-4 col-form-label">Vehicle Name: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtNameEdit" name="name"
 												placeholder="Vehicle name">
 										</div>
@@ -793,7 +791,7 @@
 									<div class="mb-1">
 										<label for="txtVehicleNumberEdit" class="col-sm-4 col-form-label">Vehicle
 											Number: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtVehicleNumberEdit"
 												name="vehicleNumber" placeholder="Vehicle number">
 										</div>
@@ -801,7 +799,7 @@
 									<div class="mb-1">
 										<label for="txtRegistrationDateEdit"
 											class="col-sm-4 col-form-label">Registration Date: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="date" class="form-control" id="txtRegistrationDateEdit"
 												name="registrationDate" placeholder="Registration date">
 										</div>
@@ -809,7 +807,7 @@
 									<div class="mb-1">
 										<label for="txtDescriptionEdit" class="col-sm-4 col-form-label">Description:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<textarea type="text" class="form-control" id="txtDescriptionEdit"
 												name="description" placeholder="Description" rows="2"></textarea>
 										</div>
@@ -817,7 +815,7 @@
 									<div class="mb-1">
 										<label for="txtAcquisitionDateEdit" class="col-sm-4 col-form-label">Acquisition
 											Date: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="date" class="form-control" id="txtAcquisitionDateEdit"
 												name="acquisitionDate" placeholder="Acquisition date">
 										</div>
@@ -825,7 +823,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleMakeEdit" class="col-sm-4 col-form-label">Vehicle Make:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleMakeEdit" name="vehiclemakeid">
 												<option>-SELECT-</option>
 												<option th:each="vehicleMake : ${vehicleMakes}"
@@ -837,7 +835,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleModelEdit" class="col-sm-4 col-form-label">Vehicle Model:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleModelEdit" name="vehiclemodelid">
 												<option>-SELECT-</option>
 												<option th:each="vehicleModel : ${vehicleModels}"
@@ -849,7 +847,7 @@
 									<div class="mb-1">
 										<label for="ddlLocationEdit" class="col-sm-4 col-form-label">Current
 											Location</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlLocationEdit" name="locationid">
 												<option>-SELECT-</option>
 												<option th:each="location : ${locations}" th:value="${location.id}"
@@ -865,7 +863,7 @@
 									</div>
 									<div class="mb-1">
 										<label for="txtPowerEdit" class="col-sm-4 col-form-label">Power: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtPowerEdit" name="power"
 												placeholder="Power(disel or fuel)">
 										</div>
@@ -873,7 +871,7 @@
 									<div class="mb-1">
 										<label for="txtFuelCapacityEdit" class="col-sm-4 col-form-label">Fuel Capacity:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtFuelCapacityEdit"
 												name="fuelCapacity" placeholder="Fuel Capacity">
 										</div>
@@ -881,21 +879,21 @@
 									<div class="mb-1">
 										<label for="txtNetWeightEdit" class="col-sm-4 col-form-label">Net Weight:
 										</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="text" class="form-control" id="txtNetWeightEdit"
 												name="netWeight" placeholder="Net Weight">
 										</div>
 									</div>
 									<div class="mb-1">
 										<label for="txtRemarksEdit" class="col-sm-4 col-form-label">Remarks: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<textarea type="text" class="form-control" id="txtRemarksEdit"
 												name="remarks" placeholder="Remarks" rows="2"></textarea>
 										</div>
 									</div>
 									<div class="mb-1">
 										<label for="ddlEmployeeEdit" class="col-sm-4 col-form-label">In Charge</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlEmployeeEdit" name="employeeid">
 												<option disabled>-SELECT-</option>
 												<option th:each="employee : ${employees}" th:value="${employee.id}"
@@ -907,7 +905,7 @@
 									<div class="mb-1">
 										<label for="ddlVehicleStatusEdit" class="col-sm-4 col-form-label">Current
 											Status</label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<select class="form-control" id="ddlVehicleStatusEdit"
 												name="vehiclestatusid">
 												<option>-SELECT-</option>
@@ -920,7 +918,7 @@
 									</div>
 									<div class="mb-1">
 										<label for="flpImageEdit" class="col-sm-4 col-form-label">Select Image: </label>
-										<div class="col-sm-6">
+										<div class="col-sm-10">
 											<input type="file" class="form-control-file" id="fupImageEdit" name="photo"
 												placeholder="Select File">
 										</div>
