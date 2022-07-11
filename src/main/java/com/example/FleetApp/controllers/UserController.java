@@ -20,41 +20,34 @@ import com.example.FleetApp.services.UserService;
 public class UserController {
 	
 	@Autowired private UserService userService;
-	
+
+
 	//Get All Users
 	@GetMapping("users")
-	public String findAll(Model model){		
+	public String findAll(Model model){
+		model.addAttribute("users", userService.findAll());
 		return "user";
-	}	
-	
-	@RequestMapping("users/findById") 
+	}
+
+	@RequestMapping("users/findById")
 	@ResponseBody
-	public Optional<User> findById(Integer id)
+	public User findById(Integer id)
 	{
 		return userService.findById(id);
 	}
 
-	
-	@RequestMapping(value="users/update", method = {RequestMethod.PUT, RequestMethod.GET})
-	public String update(User user) {
-		userService.save(user);
-		return "redirect:/users";
-	}
-	
-	@RequestMapping(value="users/delete", method = {RequestMethod.DELETE, RequestMethod.GET})	
-	public String delete(Integer id) {
-		userService.delete(id);
-		return "redirect:/users";
-	}
 	//Modified method to Add a new user User
 	@PostMapping(value="users/addNew")
 	public RedirectView addNew(User user, RedirectAttributes redir) {
+		
 		userService.save(user);	
+		
 		RedirectView  redirectView= new RedirectView("/login",true);
-	        redir.addFlashAttribute("message",
-	    		"You successfully registered! You can now login");
+		
+	    redir.addFlashAttribute("message",	"You successfully registered! You can now login");
+	        
 	    return redirectView;				
-	}	
+	}
 
 
 }
