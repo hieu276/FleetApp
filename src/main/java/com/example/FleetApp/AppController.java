@@ -10,4 +10,19 @@ public class AppController {
 	public String goHome() {
 		return "index";
 	}
+	
+	@GetMapping("/login")
+	public String login() {
+		return "pages-login";
+	}
+	
+	@GetMapping("/logout")
+	public String logout() {
+		return "logout";
+	}
+	
+	@GetMapping("/register")
+	public String register() {
+		return "pages-register";
+	}
 }

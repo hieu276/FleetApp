@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.FleetApp.models.Contact;
 import com.example.FleetApp.services.ContactService;
 import com.example.FleetApp.services.CountryService;
-import com.example.FleetApp.services.EmployeeTypeService;
-import com.example.FleetApp.services.JobTitleService;
 import com.example.FleetApp.services.StateService;
 
 @Controller
