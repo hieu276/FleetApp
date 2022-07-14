@@ -7,13 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.FleetApp.models.Employee;
+import com.example.FleetApp.models.User;
 import com.example.FleetApp.repositories.EmployeeRepository;
+import com.example.FleetApp.repositories.UserRepository;
 
 @Service
 public class EmployeeService {
 		
 	@Autowired
 	private EmployeeRepository employeeRepository;
+	@Autowired
+	private UserRepository userRepository;
 	
 	//Get All Employees
 	public List<Employee> findAll(){
@@ -38,5 +42,15 @@ public class EmployeeService {
 	//Get Employee by username
 	public Employee findByUsername(String un) {
 		return employeeRepository.findByUsername(un);
+	}
+	
+	//Set the Username of the employee where firstname and lastname match
+	public void assignUsername(int id){
+		Employee employee = employeeRepository.findById(id).orElse(null);
+		User user = userRepository.findByFirstnameAndLastname(
+				employee.getFirstname(),
+				employee.getLastname());
+		employee.setUsername(user.getUsername());
+		employeeRepository.save(employee);
 	}
 }

@@ -30,6 +30,8 @@ btnEditList.forEach(button => {
 		document.getElementById("txtHireDateEdit").value = jsonObject.hireDate.substr(0,10);
 		document.getElementById("ddlJobTitleEdit").value = jsonObject.jobtitleid;
 		document.getElementById("ddlMaritalStatusEdit").value = jsonObject.maritalStatus;
+		document.getElementById("txtUsernameEdit").value = jsonObject.username;
+		
 	};
 	
 	var myModal = new bootstrap.Modal(document.getElementById('editModal'));

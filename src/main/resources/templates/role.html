@@ -161,7 +161,7 @@
 
 						<li class="message-item">
 							<a href="#">
-								<img src="/assets/img/messages-1.jpg" alt="" class="rounded-circle">
+								<img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
 								<div>
 									<h4>Maria Hudson</h4>
 									<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -322,8 +322,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="components-alerts.html">
-							<i class="bi bi-circle" th:href="@{/vehicleModels}"></i><span>Vehicle Models</span>
+						<a th:href="@{/vehicleModels}">
+							<i class="bi bi-circle"></i><span>Vehicle Models</span>
 						</a>
 					</li>
 					<li>
@@ -525,35 +525,27 @@
 			</nav>
 		</div><!-- End Page Title -->
 		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">New
-			User</button>
+			Role</button>
 
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Firstname</th>
-					<th>Lastname</th>
-					<th>Username</th>
-					<th></th>
+					<th>ID</th>
+					<th>Description</th>
+					<th>Details</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="user:${users}">
-					<th th:text="${user.firstname}">Firstname</th>
-					<td th:text="${user.lastname}">Lastname</td>
-					<td th:text="${user.username}">Username</td>
-					<td>
-					<a  th:href="@{'/security/user/Edit/'+${user.id}}"
-   class="btn btn-default">Manage Roles</a>
-					</td>
+				<tr th:each="role:${roles}">
+					<th th:text="${role.id}"></th>
+					<td th:text="${role.description}"></td>
+					<td th:text="${role.details}"></td>
 					<td>
 						<div class="btn-group">
-							<a class="btn btn-primary" th:href="@{/users/findById/(id=${user.id})}"><i
-									class="bi bi-pencil-square"></i></a>
-							<a class="btn btn-success" id="detailsButton"
-								th:href="@{/users/findById/(id=${user.id})}"><i class="bx bx-detail"></i></a>
-							<a class="btn btn-danger" id="deleteButton" th:href="@{/users/delete/(id=${user.id})}"><i
-									class="bx bx-x-circle"></i></a>
+							<a class="btn btn-primary" th:href="@{/roles/findById/(id=${role.id})}"><i class="bi bi-pencil-square"></i></a>
+							<a class="btn btn-success" id="detailsButton" th:href="@{/roles/findById/(id=${role.id})}"><i class="bx bx-detail"></i></a>
+							<a class="btn btn-danger" id="deleteButton" th:href="@{/roles/delete/(id=${role.id})}"><i class="bx bx-x-circle"></i></a>
 						</div>
 					</td>
 				</tr>
@@ -580,11 +572,11 @@
 			class="bi bi-arrow-up-short"></i></a>
 	<!-- ======= Modal ======= -->
 	<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<form th:action="@{/vehicleMakes/addNew}" method="post">
+		<form th:action="@{/roles/addNew}" method="post">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">New User Record</h5>
+						<h5 class="modal-title" id="exampleModalLabel">New role Record</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           					<span aria-hidden="true">&times;</span>
           				</button>
@@ -613,11 +605,11 @@
 	</div><!-- End Add Modal -->
 
 	<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<form th:action="@{/vehicleMakes/update}" method="put">
+		<form th:action="@{/roles/update}" method="put">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Edit vehicleMake record</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Edit role record</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -645,11 +637,11 @@
 		</form>
 	</div><!-- End Edit Modal -->
 	<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<form th:action="@{/vehicleMakes/addNew}" method="post">
+		<form th:action="@{/roles/addNew}" method="post">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">vehicleMakes Details</h5>
+						<h5 class="modal-title" id="exampleModalLabel">roles Details</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           				<span aria-hidden="true">&times;</span>
 					</div>
@@ -716,7 +708,7 @@
 
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
-	<script src="assets/js/user.js"></script>
+	<script src="assets/js/role.js"></script>
 
 </body>
 

@@ -105,4 +105,11 @@ public class EmployeeController {
 		model.addAttribute("employee", employeeService.findByUsername(un));
 		return "profile";
 	}
+	
+	//Assign Employee Username
+	@RequestMapping(value = "/employees/assignUsername")
+	public  String assignUsername(int id){
+		employeeService.assignUsername(id);
+		return "redirect:/employees";
+	}
 }

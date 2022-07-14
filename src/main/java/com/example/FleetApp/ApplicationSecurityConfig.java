@@ -37,6 +37,7 @@ extends WebSecurityConfigurerAdapter  {
 				"/assets/vendor/**", 
 				"/assets/img/**", 
 				"/assets/js/**").permitAll()
+//		.antMatchers("security/user/Edit/**").hasRole("ADMIN")
 		.antMatchers("/users/addNew").permitAll()
 		.anyRequest().authenticated()
 		.and()

@@ -38,6 +38,7 @@ btnDelList.forEach(button => {
 	});
 });		
 
+		
 });
 
 
