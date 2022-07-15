@@ -25,4 +25,10 @@ public class AppController {
 	public String register() {
 		return "pages-register";
 	}
+	@GetMapping("/accessDenied")
+	public String accessDenied() {
+		return "accessDenied";
+	}
+	
+	
 }

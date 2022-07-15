@@ -1,11 +1,14 @@
 package com.example.FleetApp.models;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.example.FleetApp.security.models.Role;
 
 public class UserPrincipal implements UserDetails {
 	
@@ -13,8 +16,15 @@ public class UserPrincipal implements UserDetails {
 	 
 	 public UserPrincipal(User user) { this.user = user; }
 	 
-	 @Override public Collection<? extends GrantedAuthority> getAuthorities() {
-	 return Collections.singleton(new SimpleGrantedAuthority("USER")); }
+	 @Override
+	 public Collection<? extends GrantedAuthority> getAuthorities() {
+	 	List<GrantedAuthority> authorities = new ArrayList<>();
+	 	for(Role role: user.getRoles()){
+	 		authorities.add(new SimpleGrantedAuthority(role.getDescription()));
+	 	}
+	 	//return Collections.singleton(new SimpleGrantedAuthority("USER"));
+	 	return authorities;
+	 }
 	 
 	 @Override public String getPassword() { return user.getPassword(); }
 	 
